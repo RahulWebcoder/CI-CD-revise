@@ -5,6 +5,9 @@ on:
   push:
     branches: [ day1 ]
   workflow_dispatch:
+env:
+  APP_ENV: dev
+  OWNER: Jayesh
 
 jobs:
    build:
@@ -19,3 +22,5 @@ jobs:
 
       - name: test context
         run : echo '${{toJson(github)}}'        
+      - name: test env
+        run : 'Environmnet : $AAP_ENV, Owner: $OWNER'
