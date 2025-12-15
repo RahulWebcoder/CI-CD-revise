@@ -8,4 +8,4 @@ jobs:
        - name: chekout code 
          uses: actions/checkout@v3
        - name: run hello
-         uses: echo "Hello from gitubactions"     
+         run: echo "Hello from gitubactions"     
