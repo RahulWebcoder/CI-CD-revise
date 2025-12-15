@@ -19,4 +19,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Say Hello
-        run: echo "Triggered by: ${{ github.event_name }} on branch ${{ github.ref }}"
+        run: echo 'Triggered by: ${{ github.event_name }} on branch ${{ github.ref }}'
