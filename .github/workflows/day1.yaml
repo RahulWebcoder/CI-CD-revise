@@ -1,11 +1,13 @@
 name: my-first-ci
 on:
   push:
+   branches:
+     - day1
 jobs:
   build:
      runs-on: ubuntu-latest
      steps:
        - name: chekout code 
          uses: actions/checkout@v3
-       - name: run hello
-         run: echo "Hello from gitubactions"     
+       - name: print github
+         run: echo "Triggered By: ${{github.event_name}} on branch {{github.ref}}"     
