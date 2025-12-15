@@ -23,4 +23,4 @@ jobs:
       - name: test context
         run : echo '${{toJson(github)}}'        
       - name: test env
-        run : 'Environmnet : $APP_ENV, Owner: $OWNER'
+        run : echo 'Environmnet : $APP_ENV, Owner: $OWNER'
