@@ -1,4 +1,3 @@
-
 name: trigger-demo
 
 on:
@@ -23,6 +22,3 @@ jobs:
 
       - name: Print event and ref
         run: echo 'Triggered by: ${{ github.event_name }} on ref ${{ github.ref }}'
-
-      
-
