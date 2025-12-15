@@ -1,0 +1,11 @@
+name: my-first-ci
+on:
+  push:
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: chekout code 
+         uses: actions/checkout@v3
+       - name: run hello
+         uses: echo "Hello from gitubactions"     
