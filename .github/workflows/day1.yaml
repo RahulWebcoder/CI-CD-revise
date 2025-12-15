@@ -19,6 +19,3 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello from GitHub Actions"
-
-      - name: Print event and ref
-        run: echo 'Triggered by: ${{ github.event_name }} on ref ${{ github.ref }}'
