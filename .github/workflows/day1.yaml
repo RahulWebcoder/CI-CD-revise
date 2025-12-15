@@ -16,3 +16,6 @@ jobs:
 
       - name: Print Hello
         run: echo "hello from github"
+
+      - name: test context
+        run : echo '${{toJson(github)}}'        
