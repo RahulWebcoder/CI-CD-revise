@@ -1,13 +1,22 @@
-name: my-first-ci
+
+name: trigger-demo
+
 on:
   push:
-   branches:
-     - day1
+    branches:
+      - day1   
+  pull_request:
+    branches:
+      - day1
+  workflow_dispatch:   # Manual trigger
+
 jobs:
   build:
-     runs-on: ubuntu-latest
-     steps:
-       - name: chekout code 
-         uses: actions/checkout@v3
-       - name: print github
-         run: echo "Triggered By: ${{github.event_name}} on branch {{github.ref}}"     
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "Triggered by: ${{ github.event_name }} on branch ${{ github.ref }}"
