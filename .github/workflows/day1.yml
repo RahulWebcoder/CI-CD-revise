@@ -10,7 +10,7 @@ env:
   OWNER: Jayesh
 
 jobs:
-   build:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,8 @@ jobs:
         run: echo "hello from github"
 
       - name: test context
-        run : echo '${{toJson(github)}}'        
+        run: echo '${{ toJson(github) }}'
+        
       - name: test env
-        run : echo "Environmnet : ${{env.APP_ENV}}, Owner: ${{env.OWNER}}"
+        run: |
+          echo "Environment : ${{ env.APP_ENV }}, Owner: ${{ env.OWNER }}"
