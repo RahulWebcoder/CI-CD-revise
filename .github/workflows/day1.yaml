@@ -24,7 +24,5 @@ jobs:
       - name: Print event and ref
         run: echo 'Triggered by: ${{ github.event_name }} on ref ${{ github.ref }}'
 
-      - name: Print GitHub context (JSON)
-        # Using single quotes to avoid bash interpreting braces
-        run: echo '${{ toJson(github) }}'
+      
 
